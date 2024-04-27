@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nearby Toilets</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header {
+            background-color: #0057d9;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            font-size: 1.2em;
+            border-radius: 0 0 20px 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 50px;
+        }
+
+        section {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 20px;
+        }
+
+        .toilet-card {
+            background-color: #fff;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .toilet-card:hover {
+            transform: scale(1.05);
+        }
+
+        .toilet-image {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-bottom: 2px solid #0057d9;
+        }
+
+        .toilet-details {
+            padding: 15px;
+        }
+
+        h3 {
+            margin-top: 0;
+            margin-bottom: 10px;
+            color: #0057d9;
+        }
+
+        p {
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        .rating {
+            display: flex;
+            align-items: center;
+            color: #f39c12;
+        }
+
+        .rating img {
+            width: 20px;
+            height: 20px;
+            margin-right: 5px;
+        }
+
+        .map-container {
+            margin-top: 20px;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        iframe {
+            width: 100%;
+            height: 300px;
+            border: 0;
+        }
+
+        .openMapsbtn{
+            background-color: #0057d9;
+            padding: 20px;
+            color: white;
+            border: none;
+            margin-top: 50px;
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Nearby Toilets</h1>
+    </header>
+
+    <section>
+        <div class="toilet-card">
+            <img src="https://streetviewpixels-pa.googleapis.com/v1/thumbnail?panoid=AzS6MOlU38f9_bUCKC1kGQ&cb_client=search.gws-prod.gps&yaw=143.4669&pitch=0&thumbfov=100&w=520&h=175" alt="Toilet 1" class="toilet-image">
+            <div class="toilet-details">
+                <h3> Public Toilet </h3>
+                <a href="https://www.google.com/maps/dir/18.497062,73.8771897/JRC9%2BV7G+Public+Toilet,+Sant+Tukaram+Nagar,+Pimpri+Colony,+Pimpri-Chinchwad,+Maharashtra+411018/@18.5593745,73.7656398,12z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x3bc2b85e2863c06d:0xb5f669074f3a1fb9!2m2!1d73.818215!2d18.622187?entry=ttu"> Directions </a>
+                <div class="rating">
+                    <img src="https://via.placeholder.com/20" alt="Star" class="star-icon">
+                    <span>⭐⭐⭐</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="toilet-card">
+            <img src="https://www.punekarnews.in/wp-content/uploads/2022/08/Toilet-Pune-PMC.jpg" alt="Toilet 2" class="toilet-image">
+            <div class="toilet-details">
+                <h3>Swachh Public Toilet</h3>
+                <a href="https://www.google.com/maps?s=web&rlz=1C1UEAD_enIN1035IN1035&sca_esv=587611622&lqi=Cht0b2lsZXRzIGluIHBpbXByaSBjaGluY2h3YWSSAQ9wdWJsaWNfYmF0aHJvb22qAVwKCC9tLzA5ZzF3EAEqCyIHdG9pbGV0cygAMiAQASIc4LDoorZhzSSKA9XljnJy1wrwXbeavVznOcL1djIfEAIiG3RvaWxldHMgaW4gcGltcHJpIGNoaW5jaHdhZA&vet=12ahUKEwjrk_j4tPWCAxVqzDgGHR_kDAIQ1YkKegQIFxAB..i&cs=0&um=1&ie=UTF-8&fb=1&gl=in&sa=X&geocode=KalH4eYzuMI7MQT8TGip4DNe&daddr=Near+Mohan+Nagar+Police+Chowki,+Late+Dhodiba+Detter+Patil+Marg,+MIDC,+Pimpri-Chinchwad,+Maharashtra+411044"> Directions </a>
+                <div class="rating">
+                    <img src="https://via.placeholder.com/20" alt="Star" class="star-icon">
+                    <span>⭐⭐⭐⭐</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="toilet-card">
+            <img src="https://www.financialexpress.com/wp-content/uploads/2019/09/public-toilet.jpg?w=660" class="toilet-image">
+            <div class="toilet-details">
+                <h3>SBM Toilet </h3>
+                <a href = "https://www.google.com/maps/dir//Bhat+Nagar,+Pimpri+Colony,+Patrashed,+Pimpri-Chinchwad,+Pimpri-Chinchwad,+Maharashtra+411044/@18.6268133,73.7134172,12z/data=!3m1!4b1!4m8!4m7!1m0!1m5!1m1!1s0x3bc2b852b8926275:0xcc7a8a036dcc6c5d!2m2!1d73.7958189!2d18.6268312?entry=ttu"> Directions </a>
+                <div class="rating">
+                    <img src="https://via.placeholder.com/20" alt="Star" class="star-icon">
+                    <span>⭐⭐</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="toilet-card">
+          <img src="https://www.hindustantimes.com/ht-img/img/2023/06/22/550x309/The-app-created-by-Amol-Bhinge-is-designed-to-help_1687454750750.jpg" alt="Toilet 3" class="toilet-image">
+          <div class="toilet-details">
+              <h3>SBM Toilet</h3>
+              <a href="https://www.google.com/maps?rlz=1C1UEAD_enIN1035IN1035&sca_esv=587611622&lqi=Cht0b2lsZXRzIGluIHBpbXByaSBjaGluY2h3YWRIucbSr_utgIAIWiUQABgAGAIYAyIbdG9pbGV0cyBpbiBwaW1wcmkgY2hpbmNod2FkkgEPcHVibGljX2JhdGhyb29tqgFcCggvbS8wOWcxdxABKgsiB3RvaWxldHMoADIgEAEiHOCw6KK2Yc0kigPV5Y5yctcK8F23mr1c5znC9XYyHxACIht0b2lsZXRzIGluIHBpbXByaSBjaGluY2h3YWQ&vet=12ahUKEwjgldDwuPWCAxXen2MGHQKbArAQ8UF6BAgZEFg..i&lei=n5htZaDKD96_juMPgraKgAs&cs=0&um=1&ie=UTF-8&fb=1&gl=in&sa=X&geocode=Kb3TlgS1ucI7Mc0561bDLOBS&daddr=Empire+Estate+Phase+1,+Sudarshan+Nagar,+Anand+Nagar,Chinchwad,+Pimpri-Chinchwad,+Maharashtra+411044">Directions </a>
+              <div class="rating">
+                  <img src="https://via.placeholder.com/20" alt="Star" class="star-icon">
+                  <span>⭐⭐</span>
+              </div>
+          </div>
+      </div>
+    </section>
+
+    <button onclick="openGoogleMaps()" class = "openMapsbtn">Open Google Maps</button>
+
+    <script>
+        function openGoogleMaps() {
+       
+            var latitude = 40.71277568255637;
+            var longitude = -74.00597258490778;
+
+        
+            var mapsUrl = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30631.662482251465!2d73.8100744!3d18.6283422!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2bfac9c7c333f%3A0x7b95d0ac6953a0cd!2sPune%2C%20Maharashtra%2C%20India!5e0!3m2!1sen!2s!4v1641522206905!5m2!1sen!2s";
+
+      
+            var iframe = document.createElement("iframe");
+            iframe.width = "600";
+            iframe.height = "450";
+            iframe.frameBorder = "0";
+            iframe.style.border = "0";
+            iframe.src = mapsUrl;
+            iframe.allowfullscreen = true;
+
+        
+            document.getElementById("map-container").innerHTML = "";
+            document.getElementById("map-container").appendChild(iframe);
+        }
+    </script>
+
+    <div id="map-container"></div>
+
+</body>
+</html>
